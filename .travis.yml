@@ -23,12 +23,11 @@ after_success:
   - docker push davidka79/multi-server
   - docker push davidka79/multi-worker
 
-
 deploy:
   provider: elasticbeanstalk
   region: "eu-north-1"
   app: "multi-docker"
-  env: "multi-docker-env"
+  env: "Multi-docker-env"
   bucket_name: "elasticbeanstalk-eu-north-1-322431154880"
   bucket_path: "multi-docker"
   on:
